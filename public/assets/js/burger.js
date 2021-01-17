@@ -1,20 +1,20 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-sleep").on("click", function(event) {
+    $(".change-devour").on("click", function(event) {
       var id = $(this).data("id");
-      var newSleep = $(this).data("newsleep");
+      var newSleep = $(this).data("newdevour");
   
-      var newSleepState = {
-        sleepy: newSleep
+      var newDevourState = {
+        devoured: newDevour
       };
   
       // Send the PUT request.
-      $.ajax("/api/burger/" + id, {
+      $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newSleepState
+        data: newDevourState
       }).then(
         function() {
-          console.log("changed sleep to", newSleep);
+          console.log("changed devour to", newDevour);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -26,32 +26,32 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        name: $("#ca").val().trim(),
-        sleepy: $("[name=sleepy]:checked").val().trim()
+        burgerName: $("#ca").val().trim(),
+        devoured: false
       };
   
       // Send the POST request.
-      $.ajax("/api/burger", {
+      $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
       }).then(
         function() {
-          console.log("created new cat");
+          console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
         }
       );
     });
   
-    $(".delete-cat").on("click", function(event) {
+    $(".delete-burger").on("click", function(event) {
       var id = $(this).data("id");
   
       // Send the DELETE request.
-      $.ajax("/api/burger/" + id, {
+      $.ajax("/api/burgers/" + id, {
         type: "DELETE"
       }).then(
         function() {
-          console.log("deleted cat", id);
+          console.log("deleted burger", id);
           // Reload the page to get the updated list
           location.reload();
         }
