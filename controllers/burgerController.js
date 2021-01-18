@@ -21,7 +21,7 @@ router.get("/", function(req, res) {
     ], [
       req.body.burger_name,
     ], function(result) {
-     
+      console.log("Burger Added")
       res.json({ id: result.insertId });
 
     });
