@@ -1,9 +1,8 @@
+  
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center" >
-            <img src="/assets/css/burger.jpg" alt="burger" />
-            <h1> Eat-Da-Burger! </h1>
-        </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h2 class="text-center">EAT DA BURGER!</h2>
       <ul>
         {{#each burgers}}
         {{#unless devoured}}
@@ -13,7 +12,7 @@
       </ul>
     </div>
     <div class="col-sm-6">
-      <h1 class="text-center">Devour it!</h1>
+      <h2 class="text-center">Devour!</h2>
 
       <ul>
         {{#each burgers}}
@@ -25,7 +24,7 @@
     </div>
   </div>
 
-  <h1 class="text-center">Add a Burger</h1>
+  <h2 class="text-center">Add a Burger</h2>
   <form class="create-form text-center">
 
     <div class="form-group">
@@ -37,4 +36,3 @@
   </form>
 
 </div>
-
