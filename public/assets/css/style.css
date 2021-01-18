@@ -6,6 +6,29 @@
     background-attachment: fixed;
   }
 
+  h2 {
+    font-family: 'Permanent Marker', cursive;  
+  }
+
+  button {
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  label {
+    font-family: 'Permanent Marker', cursive;
+  }
+  .container {
+    margin: auto;
+    /* width: 50%; */
+    border: 3px solid green;
+    padding: 10px;
+    width:600px;
+    box-shadow: 3px 3px 3px 3px grey;
+    margin: 300px 400px 400px 600px;
+    background-color: white;
+
+  }
+  
   .center {
     display: block;
     margin-left: auto;
@@ -40,4 +63,10 @@
     
     .form-group {
       margin-bottom: 5px;
+    }
+
+    label {
+        font-size: 20px;
+        font-weight: bold;
+
     }
